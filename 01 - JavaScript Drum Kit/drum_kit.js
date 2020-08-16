@@ -5,7 +5,8 @@ const keys = [65, 83, 68, 70, 71, 72, 74, 75, 76];
 document.addEventListener("keydown", event => {
     for (var k = 0; k < keys.length; k++) {
         if (event.keyCode === keys[k]) {
-            document.querySelector(`audio[data-key="`+keys[k]+`"]`).play();
+            const audioKey = document.querySelector(`audio[data-key="`+keys[k]+`"]`);
+            audioKey.play();
             let divKey = document.querySelector(`div[data-key="`+keys[k]+`"]`);
             if (divKey.className === 'key') {
                 divKey.className = 'key playing';
