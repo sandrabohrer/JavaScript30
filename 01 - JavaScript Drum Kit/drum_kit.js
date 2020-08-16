@@ -10,7 +10,7 @@ document.addEventListener("keydown", event => {
             audioKey.play();
             let divKey = document.querySelector(`div[data-key="`+keys[k]+`"]`);
             if (divKey.className === 'key') {
-                divKey.className = 'key playing';
+                divKey.classList.add('playing');
             }
         }
     }
