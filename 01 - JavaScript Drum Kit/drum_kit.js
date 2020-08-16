@@ -22,7 +22,7 @@ document.addEventListener("keyup", event => {
         if (event.keyCode === keys[k]) {
             let divKey = document.querySelector(`div[data-key="`+keys[k]+`"]`);
             if (divKey.className === 'key playing') {
-                divKey.className = 'key';
+                divKey.classList.remove('playing');
             }
         }
     }
