@@ -5,7 +5,10 @@ document.addEventListener("keydown", event => {
     for (var k = 0; k < keys.length; k++) {
         if (event.keyCode === keys[k]) {
             document.querySelector(`audio[data-key="`+keys[k]+`"]`).play();
+            let divKey = document.querySelector(`div[data-key="`+keys[k]+`"]`);
+            if (divKey.className !== 'key playing') {
+                divKey.className = 'key playing';
+            }
         }
     }
-    
 });
