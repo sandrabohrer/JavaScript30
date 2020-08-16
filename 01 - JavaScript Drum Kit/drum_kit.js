@@ -6,7 +6,7 @@ document.addEventListener("keydown", event => {
         if (event.keyCode === keys[k]) {
             document.querySelector(`audio[data-key="`+keys[k]+`"]`).play();
             let divKey = document.querySelector(`div[data-key="`+keys[k]+`"]`);
-            if (divKey.className !== 'key playing') {
+            if (divKey.className === 'key') {
                 divKey.className = 'key playing';
             }
         }
